@@ -1,0 +1,90 @@
+package ${package.ServiceImpl};
+
+import ${package.Entity}.${entity};
+import ${package.Mapper}.${table.mapperName};
+import ${package.Service}.${table.serviceName};
+import ${superServiceImplClassPackage};
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import cn.hutool.core.date.DateUtil;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.xiaobai.enumeration.RInfo;
+import com.xiaobai.utils.R;
+
+import java.util.List;
+/**
+ * @author 终于白发始于青丝
+ * @create ${date}
+ * @Version 1.0
+ * @ClassName ${table.serviceImplName}
+ * @Description 类方法说明：
+ */
+@Service
+#if(${kotlin})
+open class ${table.serviceImplName} : ${superServiceImplClass}<${table.mapperName}, ${entity}>(), ${table.serviceName} {
+
+}
+#else
+public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> implements ${table.serviceName} {
+
+        @Autowired
+        private ${table.mapperName} ${table.entityPath}Mapper;
+
+        @Override
+        public R ${table.entityPath}Page(Integer pageNum, Integer pageSize) {
+            LambdaQueryWrapper<${entity}> wrapper = new LambdaQueryWrapper<>();
+            wrapper.eq(${entity}::getDelFlag, 0).orderByDesc(${entity}::getCreateTime);
+            Page<${entity}> page = new Page<>(pageNum, pageSize);
+            page(page, wrapper);
+            return R.successCMD(page);
+        }
+
+        @Override
+        public R getPages() {
+            QueryWrapper<${entity}> wrapper = new QueryWrapper<>();
+            wrapper.eq("delFlag", 0).orderByDesc("createTime");
+            return R.successCMD(${table.entityPath}Mapper.selectList(wrapper));
+        }
+
+        @Override
+        public R add${entity}(${entity} ${table.entityPath}) {
+            // 判断是否为空
+
+            ${entity} v = new ${entity}();
+            // v.set赋值
+            ${table.entityPath}Mapper.insert(v);
+            return R.successCM();
+        }
+
+        @Override
+        public R del${entity}(Long id) {
+            ${entity} ${table.entityPath} = ${table.entityPath}Mapper.selectById(id);
+            ${table.entityPath}.setDelFlag(1);
+            return R.successCMD(${table.entityPath}Mapper.updateById(${table.entityPath}));
+        }
+
+        @Override
+        public R del${entity}All(List<Long> ids) {
+            QueryWrapper<${entity}> wrapper = new QueryWrapper<>();
+            wrapper.in("id", ids);
+            for (${entity} ${table.entityPath} : ${table.entityPath}Mapper.selectList(wrapper)) {
+                ${table.entityPath}.setDelFlag(1);
+                ${table.entityPath}Mapper.updateById(${table.entityPath});
+            }
+            return R.successCM();
+        }
+
+        @Override
+        public R update${entity}(Long id, String info) {
+            // 判断是否为空
+
+            ${entity} ${table.entityPath} = new ${entity}();
+            ${table.entityPath}.setId(id);
+            // 赋值修改内容
+            ${table.entityPath}Mapper.updateById(${table.entityPath});
+            return R.successCM();
+        }
+}
+#end

@@ -1,0 +1,24 @@
+package ${package.Service};
+
+import ${package.Entity}.${entity};
+import ${superServiceClassPackage};
+import com.xiaobai.utils.R;
+import java.util.List;
+#if(${kotlin})
+interface ${table.serviceName} : ${superServiceClass}<${entity}>
+#else
+public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
+
+    R ${table.entityPath}Page(Integer pageNum, Integer pageSize);
+
+    R getPages();
+
+    R add${entity}(${entity} ${table.entityPath});
+
+    R del${entity}(Long id);
+
+    R del${entity}All(List<Long> ids);
+
+    R update${entity}(Long id, String info);
+}
+#end

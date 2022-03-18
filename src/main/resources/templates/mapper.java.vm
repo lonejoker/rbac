@@ -1,0 +1,25 @@
+package ${package.Mapper};
+
+import ${package.Entity}.${entity};
+import ${superMapperClassPackage};
+#if(${mapperAnnotation})
+import org.apache.ibatis.annotations.Mapper;
+#end
+
+/**
+ * @author 终于白发始于青丝
+ * @create ${date}
+ * @Version 1.0
+ * @ClassName ${table.mapperName}
+ * @Description 类方法说明：
+ */
+#if(${mapperAnnotation})
+@Mapper
+#end
+#if(${kotlin})
+interface ${table.mapperName} : ${superMapperClass}<${entity}>
+#else
+public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
+
+}
+#end

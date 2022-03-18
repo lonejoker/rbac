@@ -1,0 +1,76 @@
+package ${package.Controller};
+
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import com.xiaobai.utils.R;
+import org.springframework.beans.factory.annotation.Autowired;
+import $!{package.Service}.$!{table.serviceName};
+import ${package.Entity}.${entity};
+
+#if(${restControllerStyle})
+import org.springframework.web.bind.annotation.RestController;
+#else
+import org.springframework.stereotype.Controller;
+#end
+#if(${superControllerClassPackage})
+import ${superControllerClassPackage};
+#end
+
+/**
+ * @author 终于白发始于青丝
+ * @create ${date}
+ * @Version 1.0
+ * @ClassName ${table.controllerName}
+ * @Description 类方法说明：
+ */
+#if(${restControllerStyle})
+@RestController
+#else
+@Controller
+#end
+@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+#if(${kotlin})
+class ${table.controllerName}#if(${superControllerClass}) : ${superControllerClass}()#end
+
+#else
+#if(${superControllerClass})
+public class ${table.controllerName} extends ${superControllerClass} {
+#else
+public class ${table.controllerName} {
+#end
+
+    @Autowired
+    private ${table.serviceName} ${table.entityPath}Service;
+
+    @GetMapping("/page")
+    public R ${table.entityPath}Page(@RequestParam(required = false) Integer pageNum,@RequestParam(required = false) Integer pageSize) {
+        return ${table.entityPath}Service.${table.entityPath}Page(pageNum, pageSize);
+    }
+
+    @GetMapping("/get${entity}Info")
+    public R getPages() {
+        return ${table.entityPath}Service.getPages();
+    }
+
+    @PostMapping("/add${entity}")
+    public R add${entity}(@RequestBody ${entity} ${table.entityPath}) {
+        return ${table.entityPath}Service.add${entity}(${table.entityPath});
+    }
+
+    @DeleteMapping("/del${entity}/{id}")
+    public R del${entity}(@PathVariable Long id) {
+        return ${table.entityPath}Service.del${entity}(id);
+    }
+
+    @PostMapping("/del${entity}All/{ids}")
+    public R del${entity}All(@PathVariable List<Long> ids) {
+        return ${table.entityPath}Service.del${entity}All(ids);
+    }
+
+    @PutMapping("/update${entity}")
+    public R update${entity}(@RequestParam Long id, @RequestParam String info) {
+        return ${table.entityPath}Service.update${entity}(id, info);
+    }
+}
+#end
