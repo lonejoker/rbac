@@ -57,7 +57,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         }
         // 存入SecurityContextHolder，需要的是一个authentication类型
         // TODO 获取权限信息，封装Authentication
-        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginuser, null, null);
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginuser, null, loginuser.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
         // 最后放行
         filterChain.doFilter(request,response);

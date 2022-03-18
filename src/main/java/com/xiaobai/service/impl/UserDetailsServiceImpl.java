@@ -3,6 +3,7 @@ package com.xiaobai.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.xiaobai.entity.LoginUser;
 import com.xiaobai.entity.SysUser;
+import com.xiaobai.mapper.SysMenuMapper;
 import com.xiaobai.mapper.SysUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,6 +11,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -24,6 +28,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     private SysUserMapper sysUserMapper;
+    @Autowired
+    private SysMenuMapper sysMenuMapper;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -39,6 +45,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         // todo 查询对应的权限信息
         // 因为UserDetails是一个接口，封装的话要创建他的实现类
         // 将数据封装成UserDetails返回
-        return new LoginUser(user);
+        //List<String> list = new ArrayList<>(Arrays.asList("test", "demo"));
+        List<String> list = sysMenuMapper.selectByUserId(user.getId());
+        return new LoginUser(user, list);
     }
 }

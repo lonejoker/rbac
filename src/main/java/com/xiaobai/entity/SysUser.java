@@ -98,6 +98,9 @@ public class SysUser implements Serializable {
      * 逻辑删除（0未删除，1已删除）
      */
     private Integer delFlag;
-
+    /**
+     * 用户角色
+    */
+    private String roleName;
 
 }

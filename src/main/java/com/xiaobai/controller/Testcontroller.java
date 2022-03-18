@@ -1,5 +1,6 @@
 package com.xiaobai.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,11 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Testcontroller {
     @RequestMapping("/test")
-    public String test(){
+    @PreAuthorize("hasAuthority('index')")
+    public String test() {
         return "test demo";
     }
+
     @RequestMapping("/demo")
-    public String demo(){
+    @PreAuthorize("hasAuthority('index')")
+    public String demo() {
         return "demo demo";
     }
 }

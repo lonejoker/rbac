@@ -1,12 +1,16 @@
 package com.xiaobai.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author 终于白发始于青丝
@@ -17,10 +21,19 @@ import java.util.Collection;
  */
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class LoginUser implements UserDetails {
 
     private SysUser sysUser;
+    private List<String> permissions;
+
+    public LoginUser(SysUser sysUser, List<String> permissions) {
+        this.sysUser = sysUser;
+        this.permissions = permissions;
+    }
+
+    // 不需要把这个成员变量序列化存储到redis中
+    @JSONField(serialize = false)
+    private List<SimpleGrantedAuthority> authorities;
 
     /**
      * @author 终于白发始于青丝
@@ -30,7 +43,20 @@ public class LoginUser implements UserDetails {
      */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        if (authorities != null) {
+            return authorities;
+        }
+        // 把permissions类型的权限信息封装成SimpleGrantedAuthority对象
+        // 方式一
+        // authorities = new ArrayList<>();
+        //for (String permission : permissions) {
+        //    SimpleGrantedAuthority authority = new SimpleGrantedAuthority(permission);
+        //    list.add(authority);
+        //}
+        //return authorities;
+        // 方式二
+        authorities = permissions.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+        return authorities;
     }
 
     /**

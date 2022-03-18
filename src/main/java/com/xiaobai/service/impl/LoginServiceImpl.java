@@ -2,9 +2,11 @@ package com.xiaobai.service.impl;
 
 import com.xiaobai.entity.LoginUser;
 import com.xiaobai.service.LoginService;
+import com.xiaobai.utils.BeanCopyUtils;
 import com.xiaobai.utils.JwtUtil;
 import com.xiaobai.utils.R;
 import com.xiaobai.utils.RedisCache;
+import com.xiaobai.vo.LoginUserVo;
 import com.xiaobai.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -52,7 +54,7 @@ public class LoginServiceImpl implements LoginService {
         String jwt = JwtUtil.createJWT(userId);
         Map<Object, Object> map = new HashMap<>();
         map.put("token", jwt);
-        map.put("user", loginUser.getSysUser());
+        map.put("user", BeanCopyUtils.copyObject(loginUser.getSysUser(), LoginUserVo.class));
         // 将完整的用户信息存入redis，userId作为key
         redisCache.setCacheObject("rbac:" + userId, loginUser);
         return R.successCmd(map);

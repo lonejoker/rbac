@@ -37,4 +37,13 @@ public class TestDemo {
         boolean matches = passwordEncoder.matches("1", "$2a$10$emTf.LAwSJ9Yb9xJMH2BUuRGtZQCbDxOq7Ul0NCHEkxfb4vCSNpwW");
         System.out.println(matches);
     }
+
+    @Autowired
+    private  SysMenuMapper sysMenuMapper;
+
+    @Test
+    public void testMenu() {
+        List<String> list = sysMenuMapper.selectByUserId(1L);
+        System.out.println(list);
+    }
 }
