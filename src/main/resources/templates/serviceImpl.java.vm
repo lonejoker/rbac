@@ -38,14 +38,14 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
             wrapper.eq(${entity}::getDelFlag, 0).orderByDesc(${entity}::getCreateTime);
             Page<${entity}> page = new Page<>(pageNum, pageSize);
             page(page, wrapper);
-            return R.successCMD(page);
+            return R.successCmd(page);
         }
 
         @Override
         public R getPages() {
             QueryWrapper<${entity}> wrapper = new QueryWrapper<>();
             wrapper.eq("delFlag", 0).orderByDesc("createTime");
-            return R.successCMD(${table.entityPath}Mapper.selectList(wrapper));
+            return R.successCmd(${table.entityPath}Mapper.selectList(wrapper));
         }
 
         @Override
@@ -55,14 +55,14 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
             ${entity} v = new ${entity}();
             // v.set赋值
             ${table.entityPath}Mapper.insert(v);
-            return R.successCM();
+            return R.successCm();
         }
 
         @Override
         public R del${entity}(Long id) {
             ${entity} ${table.entityPath} = ${table.entityPath}Mapper.selectById(id);
             ${table.entityPath}.setDelFlag(1);
-            return R.successCMD(${table.entityPath}Mapper.updateById(${table.entityPath}));
+            return R.successCmd(${table.entityPath}Mapper.updateById(${table.entityPath}));
         }
 
         @Override
@@ -73,7 +73,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
                 ${table.entityPath}.setDelFlag(1);
                 ${table.entityPath}Mapper.updateById(${table.entityPath});
             }
-            return R.successCM();
+            return R.successCm();
         }
 
         @Override
@@ -84,7 +84,7 @@ public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.m
             ${table.entityPath}.setId(id);
             // 赋值修改内容
             ${table.entityPath}Mapper.updateById(${table.entityPath});
-            return R.successCM();
+            return R.successCm();
         }
 }
 #end

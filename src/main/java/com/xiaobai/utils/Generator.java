@@ -38,6 +38,8 @@ public class Generator {
                 })
                 .strategyConfig(builder -> {
                     builder.addInclude("sys_menu") // 设置需要生成的表名
+                            .addInclude("sys_user")
+                            .addInclude("sys_role")
                             .entityBuilder().enableLombok() // lombok
                             .controllerBuilder()  // 开启驼峰转连字符
                             .enableRestStyle()  // 开启生成@RestController 控制器
