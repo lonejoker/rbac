@@ -1,15 +1,21 @@
 package com.xiaobai.utils;
 
 import com.xiaobai.enumeration.RInfo;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author 终于白发始于青丝
  * @create 2022-01-24 下午 14:01
  * @program BlogProject
  * @Version 1.0
- * @ClassName unified
+ * @ClassName R
+ * @Description 类方法说明：统一返回数据格式
  */
-// 统一返回数据格式
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class R {
     // 返回状态码
     private Integer code;
@@ -18,60 +24,16 @@ public class R {
     // 返回数据
     private Object data;
 
-    public static R successCM() {
-        //return new R(200, "操作成功");
+    public static R successCm() {
         return new R(RInfo.SUCCESS.getCode(), RInfo.SUCCESS.getMsg());
     }
 
-    public static R logoutsuccessCM(Integer code, String msg) {
-        //return new R(200, "操作成功");
-        return new R(code, msg);
-    }
-
-    public static R successCMD(Object data) {
-        //return new R(200, "操作成功", data);
+    public static R successCmd(Object data) {
         return new R(RInfo.SUCCESS.getCode(), RInfo.SUCCESS.getMsg(), data);
     }
 
     public static R error(Integer code, String msg) {
         return new R(code, msg);
-    }
-
-
-    public Integer getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
-        this.code = code;
-    }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public Object getData() {
-        return data;
-    }
-
-    public void setData(Object data) {
-        this.data = data;
-    }
-
-    @Override
-    public String toString() {
-        return "R{" +
-                "code=" + code +
-                ", msg='" + msg + '\'' +
-                ", data=" + data +
-                '}';
-    }
-
-    public R() {
     }
 
     public R(Integer code) {
@@ -85,12 +47,6 @@ public class R {
 
     public R(Integer code, Object data) {
         this.code = code;
-        this.data = data;
-    }
-
-    public R(Integer code, String msg, Object data) {
-        this.code = code;
-        this.msg = msg;
         this.data = data;
     }
 }
