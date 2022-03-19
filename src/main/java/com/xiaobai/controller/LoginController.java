@@ -4,6 +4,7 @@ import com.xiaobai.service.LoginService;
 import com.xiaobai.utils.R;
 import com.xiaobai.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -26,6 +27,7 @@ public class LoginController {
     }
 
     @GetMapping("/logout")
+    @PreAuthorize("hasAuthority('index')")
     public R logout() {
         return loginService.logout();
     }
