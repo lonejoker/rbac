@@ -1,12 +1,18 @@
 package com.xiaobai.service.impl;
 
 import com.xiaobai.entity.LoginUser;
+import com.xiaobai.entity.SysMenu;
+import com.xiaobai.mapper.SysMenuMapper;
+import com.xiaobai.mapper.SysRoleMapper;
+import com.xiaobai.mapper.SysRoleMenuMapper;
 import com.xiaobai.service.LoginService;
+import com.xiaobai.service.SysMenuService;
 import com.xiaobai.utils.BeanCopyUtils;
 import com.xiaobai.utils.JwtUtil;
 import com.xiaobai.utils.R;
 import com.xiaobai.utils.RedisCache;
 import com.xiaobai.vo.LoginUserVo;
+import com.xiaobai.vo.RoleVo;
 import com.xiaobai.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,9 +21,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * @author 终于白发始于青丝
@@ -31,6 +35,12 @@ public class LoginServiceImpl implements LoginService {
 
     @Autowired
     private AuthenticationManager authenticationManager;
+    @Autowired
+    private SysRoleMapper sysRoleMapper;
+    @Autowired
+    private SysRoleMenuMapper sysRoleMenuMapper;
+    @Autowired
+    private SysMenuService sysMenuService;
     @Autowired
     private RedisCache redisCache;
 
@@ -51,13 +61,53 @@ public class LoginServiceImpl implements LoginService {
         LoginUser loginUser = (LoginUser) authenticate.getPrincipal();
         // 因为jwt所需要的是一个string类型
         String userId = loginUser.getSysUser().getId().toString();
+
+        // 查询用户权限及对应的菜单
+        // 用户用户角色标识
+        String roleName = loginUser.getRoleName();
+        List<SysMenu> roleMenu = getRoleMenu(roleName);
+        List<RoleVo> roleVos = BeanCopyUtils.copyListBean(roleMenu, RoleVo.class);
+
         String jwt = JwtUtil.createJWT(userId);
         Map<Object, Object> map = new HashMap<>();
         map.put("token", jwt);
+        map.put("roles",roleVos);
         map.put("user", BeanCopyUtils.copyObject(loginUser.getSysUser(), LoginUserVo.class));
         // 将完整的用户信息存入redis，userId作为key
         redisCache.setCacheObject("rbac:" + userId, loginUser);
         return R.successCmd(map);
+    }
+
+    /**
+     * @author 终于白发始于青丝
+     * @Methodname getRoleMenu
+     * @Description 类方法说明：用户角色标识
+     * @Return 返回值：java.util.List<com.xiaobai.entity.SysMenu>
+     * @Params java.lang.String roleName
+     * @Date 2022/3/18 下午 22:53
+     */
+    private List<SysMenu> getRoleMenu(String roleName) {
+        // 根据用户角色标识查询出角色id
+        Long roleId = sysRoleMapper.selectRoleIdByRoleName(roleName);
+        // 查询出当前角色的所有菜单id集合
+        List<Long> menus = sysRoleMenuMapper.selectRolesByRoleId(roleId);
+        // 查询出系统所有菜单
+        List<SysMenu> menuAll = sysMenuService.findAllMenus("");
+        // 创建一个筛选后的菜单集合
+        List<SysMenu> list = new ArrayList<>();
+        // 筛选当前用户菜单
+        for (SysMenu sysMenu : menuAll) {
+            // 父级菜单
+            if (menus.contains(sysMenu.getId())) {
+                list.add(sysMenu);
+            }
+            // 子级菜单
+            List<SysMenu> children = sysMenu.getChildren();
+            // removeIf() 移除children里面不在authoritys集合中的元素
+            children.removeIf(child -> !menus.contains(child.getId()));
+
+        }
+        return list;
     }
 
     @Override

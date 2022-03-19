@@ -2,6 +2,7 @@ package com.xiaobai.mapper;
 
 import com.xiaobai.entity.SysRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @author 终于白发始于青丝
@@ -12,4 +13,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface SysRoleMapper extends BaseMapper<SysRole> {
 
+    Long selectRoleIdByRoleName(@Param("roleName") String roleName);
 }

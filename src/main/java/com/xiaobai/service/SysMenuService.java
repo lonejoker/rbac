@@ -17,4 +17,6 @@ public interface SysMenuService extends IService<SysMenu> {
     R delSysMenuAll(List<Long> ids);
 
     R updateSysMenu(Long id, String info);
+
+    List<SysMenu> findAllMenus(String name);
 }

@@ -15,6 +15,7 @@ import lombok.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author 终于白发始于青丝
@@ -93,6 +94,26 @@ public class SysMenu implements Serializable {
      * 备注
      */
     private String remark;
+    /**
+     * 父级id
+    */
+    private Long parentId;
+    /**
+     * 子级菜单
+    */
+    @TableField(exist = false)
+    private List<SysMenu> children;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SysMenu sysMenu = (SysMenu) o;
+        return path.equals(sysMenu.path);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(path);
+    }
 }

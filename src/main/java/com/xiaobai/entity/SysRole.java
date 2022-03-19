@@ -73,6 +73,10 @@ public class SysRole implements Serializable {
      * 备注
      */
     private String remark;
+    /**
+     * 唯一标识
+    */
+    private String flag;
 
 
 }

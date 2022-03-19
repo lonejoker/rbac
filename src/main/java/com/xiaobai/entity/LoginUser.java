@@ -78,7 +78,17 @@ public class LoginUser implements UserDetails {
      */
     @Override
     public String getUsername() {
-        return sysUser.getPassword();
+        return sysUser.getUserName();
+    }
+
+    /**
+     * @author 终于白发始于青丝
+     * @Classname LoginUser
+     * @Description 类方法说明：获取用户角色标识
+     * @Date 2022/3/14 上午 8:33
+     */
+    public String getRoleName() {
+        return sysUser.getRoleName();
     }
 
     /**

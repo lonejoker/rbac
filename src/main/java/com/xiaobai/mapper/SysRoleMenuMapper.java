@@ -1,7 +1,11 @@
 package com.xiaobai.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.xiaobai.entity.SysMenu;
 import com.xiaobai.entity.SysRoleMenu;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * @author 终于白发始于青丝
@@ -12,4 +16,5 @@ import com.xiaobai.entity.SysRoleMenu;
  */
 public interface SysRoleMenuMapper extends BaseMapper<SysRoleMenu> {
 
+    List<Long> selectRolesByRoleId(@Param("roleId") Long roleId);
 }
