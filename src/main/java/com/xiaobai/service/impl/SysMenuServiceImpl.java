@@ -100,11 +100,6 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         List<SysMenu> parentNodess = list.stream().filter(menu -> menu.getParentId() != null).collect(Collectors.toList());
         List<SysMenu> parentNodesss = list.stream().filter(menu -> menu.getParentId() != null).collect(Collectors.toList());
         // 找出一级菜单的子菜单
-        System.out.println(list);
-        System.out.println("---------------");
-        System.out.println(parentNodes);
-        System.out.println("-----======-----");
-        System.out.println(parentNodess);
         for (SysMenu parentNode : parentNodes) {
             // 筛选所有数据中pid等于父级id的数据为二级菜单
             // parentNode为每一个一级菜单
@@ -112,18 +107,12 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
             // p.getParentId()为每一个一级菜单的父级id
             parentNode.setChildren(list.stream().filter(p -> parentNode.getId().equals(p.getParentId())).collect(Collectors.toList()));
             for (SysMenu parent : parentNodess) {
-                System.out.println("-----======-----");
-                System.out.println(parent);
                 parent.setChildren(list.stream().filter(p -> parent.getId().equals(p.getParentId())).collect(Collectors.toList()));
                 for (SysMenu parents : parentNodesss) {
-                    System.out.println("-----======-----");
-                    System.out.println(parents);
                     parents.setChildren(list.stream().filter(p -> parents.getId().equals(p.getParentId())).collect(Collectors.toList()));
                 }
             }
         }
-        System.out.println("---------------");
-        System.out.println(parentNodes);
         return parentNodes;
     }
 }

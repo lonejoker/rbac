@@ -1,5 +1,6 @@
 package com.xiaobai.controller;
 
+import com.xiaobai.annotation.SystemLog;
 import com.xiaobai.service.LoginService;
 import com.xiaobai.utils.R;
 import com.xiaobai.vo.UserVo;
@@ -22,6 +23,7 @@ public class LoginController {
     private LoginService loginService;
 
     @PostMapping("/login")
+    @SystemLog(businessName =  "用户登录")
     public R login(@RequestBody UserVo userVo) {
         return loginService.login(userVo);
     }

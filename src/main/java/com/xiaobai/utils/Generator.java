@@ -37,9 +37,9 @@ public class Generator {
                             .pathInfo(Collections.singletonMap(OutputFile.xml, "E:\\程序代码\\idea\\rbac\\src\\main\\resources\\mapper")); // 设置mapperXml生成路径
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("sys_menu") // 设置需要生成的表名
-                            .addInclude("sys_user")
-                            .addInclude("sys_role")
+                    builder.addInclude("sys_log") // 设置需要生成的表名
+                            //.addInclude("sys_user")
+                            //.addInclude("sys_role")
                             .entityBuilder().enableLombok() // lombok
                             .controllerBuilder()  // 开启驼峰转连字符
                             .enableRestStyle()  // 开启生成@RestController 控制器

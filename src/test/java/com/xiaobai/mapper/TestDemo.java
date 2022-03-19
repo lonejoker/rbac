@@ -46,4 +46,10 @@ public class TestDemo {
         List<String> list = sysMenuMapper.selectByUserId(1L);
         System.out.println(list);
     }
+
+    @Test
+    public void testlength(){
+        String length = "";
+        System.out.println(length.length());
+    }
 }

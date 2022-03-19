@@ -76,6 +76,7 @@ public class SysMenu implements Serializable {
     /**
      * 创建时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date createTime;
 
     /**
@@ -87,7 +88,6 @@ public class SysMenu implements Serializable {
     /**
      * 是否删除（0未删除，1已删除）
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Integer delFlag;
 
     /**
