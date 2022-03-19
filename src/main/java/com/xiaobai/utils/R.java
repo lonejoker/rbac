@@ -1,5 +1,6 @@
 package com.xiaobai.utils;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.xiaobai.enumeration.RInfo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(value= JsonInclude.Include.NON_NULL)
 public class R {
     // 返回状态码
     private Integer code;

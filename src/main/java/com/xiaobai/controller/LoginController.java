@@ -3,6 +3,7 @@ package com.xiaobai.controller;
 import com.xiaobai.annotation.SystemLog;
 import com.xiaobai.service.LoginService;
 import com.xiaobai.utils.R;
+import com.xiaobai.vo.UserRegistryVo;
 import com.xiaobai.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -29,8 +30,20 @@ public class LoginController {
     }
 
     @GetMapping("/logout")
-    @PreAuthorize("hasAuthority('index')")
+    @SystemLog(businessName =  "用户退出")
     public R logout() {
         return loginService.logout();
+    }
+
+    @PostMapping("/registry")
+    @SystemLog(businessName =  "用户注册")
+    public R registry(@RequestBody UserRegistryVo userRegistryVo) throws IllegalAccessException {
+        return loginService.registry(userRegistryVo);
+    }
+
+    @GetMapping("/getRoles")
+    @SystemLog(businessName =  "获取权限菜单")
+    public R roleLogin(@RequestParam String roleName) {
+        return loginService.roleLoginList(roleName);
     }
 }

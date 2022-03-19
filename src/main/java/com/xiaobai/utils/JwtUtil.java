@@ -20,7 +20,7 @@ import java.util.UUID;
  */
 public class JwtUtil {
     //    有效时间
-    public static final Long Jwt_TTL = 60 * 60 * 1000L;
+    public static final Long Jwt_TTL = 24 * 60 * 60 * 1000L;
     //    设置秘钥明文
     public static final String Jwt_KEY = "xiaobai";
 
