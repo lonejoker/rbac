@@ -106,7 +106,12 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.2.75</version>
 		</dependency>
-
+		<!-- 日志框架 https://www.cnblogs.com/taiyonghai/p/9290641.html -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
 
 	</dependencies>
 

@@ -21,6 +21,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -49,6 +51,8 @@ public class LoginServiceImpl implements LoginService {
     private SysUserRoleMapper sysUserRoleMapper;
     @Autowired
     private RedisCache redisCache;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public R login(UserVo userVo) {
@@ -145,7 +149,6 @@ public class LoginServiceImpl implements LoginService {
     @Override
     public R registry(UserRegistryVo userRegistryVo) throws IllegalAccessException {
         if (!EntityNull.reflect(userRegistryVo)) {
-            //SysUser sysUser = insertUser(userRegistryVo);
             insertInfo(userRegistryVo);
             return R.successCm();
         }
@@ -167,11 +170,11 @@ public class LoginServiceImpl implements LoginService {
         Long id = sysUserMapper.selectOne(wrapper).getId();
         SysUser sysUser = new SysUser();
         sysUser.setUserName(userRegistryVo.getUserName());
-        sysUser.setPassword(userRegistryVo.getPassword());
+        sysUser.setPassword(passwordEncoder.encode(userRegistryVo.getPassword()));
         sysUser.setNickName(MyEnum.ROLE_NICK_NAME + id);
         sysUser.setEmail(userRegistryVo.getEmail());
         sysUser.setPhone(userRegistryVo.getPhone());
-        sysUser.setSex(userRegistryVo.getSex());
+        sysUser.setSex(userRegistryVo.getRadio());
         sysUser.setRoleName(MyEnum.ROLE_USER + id);
         sysUser.setCreateTime(DateUtil.date());
         sysUser.setUpdateTime(DateUtil.date());

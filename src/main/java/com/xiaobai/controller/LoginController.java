@@ -38,6 +38,8 @@ public class LoginController {
     @PostMapping("/registry")
     @SystemLog(businessName =  "用户注册")
     public R registry(@RequestBody UserRegistryVo userRegistryVo) throws IllegalAccessException {
+        System.out.println(userRegistryVo);
+        //return  null;
         return loginService.registry(userRegistryVo);
     }
 

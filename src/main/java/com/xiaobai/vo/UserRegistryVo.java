@@ -24,5 +24,5 @@ public class UserRegistryVo {
     private String password;
     private String email;
     private String phone;
-    private String sex;
+    private String radio;
 }
