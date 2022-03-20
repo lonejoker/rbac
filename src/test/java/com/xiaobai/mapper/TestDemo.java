@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 终于白发始于青丝
@@ -28,7 +31,7 @@ public class TestDemo {
 
     //    测试BCryptPasswordEncoder
     @Test
-    public void testPassword(){
+    public void testPassword() {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         // 加密
         String encode = passwordEncoder.encode("1");
@@ -39,7 +42,7 @@ public class TestDemo {
     }
 
     @Autowired
-    private  SysMenuMapper sysMenuMapper;
+    private SysMenuMapper sysMenuMapper;
 
     @Test
     public void testMenu() {
@@ -48,8 +51,20 @@ public class TestDemo {
     }
 
     @Test
-    public void testlength(){
+    public void testlength() {
         String length = "";
         System.out.println(length.length());
+    }
+
+    @Test
+    public void test() {
+        Map<Object, Object> map = new HashMap<>();
+        map.put("12", 1);
+        map.put("2", 2);
+        map.put("3", 3);
+        int num = 3;
+        for (Map.Entry<Object, Object> keySet : map.entrySet()) {
+            System.out.println(keySet.getValue() + "---" + keySet.getKey());
+        }
     }
 }

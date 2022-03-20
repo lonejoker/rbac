@@ -152,7 +152,7 @@ public class LoginServiceImpl implements LoginService {
         return R.error(RInfo.ERROR4xx.getCode(), "请认真填写内容");
     }
 
-    private void insertInfo(UserRegistryVo userRegistryVo){
+    private void insertInfo(UserRegistryVo userRegistryVo) {
         SysUser sysUser = insertUser(userRegistryVo);
         sysUserMapper.insert(sysUser);
         insertUserRole();
@@ -194,10 +194,14 @@ public class LoginServiceImpl implements LoginService {
         sysUserRole.setUserId(id1);
         sysUserRole.setRoleId(id2);
         sysUserRoleMapper.insert(sysUserRole);
-        SysRoleMenu sysRoleMenu = new SysRoleMenu();
-        sysRoleMenu.setRoleId(id2);
-        sysRoleMenu.setMenuId(MyEnum.DEFAULT_MENU_ID);
-        sysRoleMenuMapper.insert(sysRoleMenu);
+        List<Long> list = new ArrayList<>();
+        list.add(MyEnum.DEFAULT_MENU_ID);
+        for (int i = 0; i < list.size(); i++) {
+            SysRoleMenu sysRoleMenu = new SysRoleMenu();
+            sysRoleMenu.setRoleId(id2);
+            sysRoleMenu.setMenuId(list.get(i));
+            sysRoleMenuMapper.insert(sysRoleMenu);
+        }
     }
 
     private void insertRole(String roleName) {
