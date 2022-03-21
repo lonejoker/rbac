@@ -6,7 +6,7 @@ import com.xiaobai.utils.R;
 import java.util.List;
 public interface SysUserService extends IService<SysUser> {
 
-    R sysUserPage(Integer pageNum, Integer pageSize);
+    R sysUserPage(Integer pageNum, Integer pageSize,String nickName);
 
     R getPages();
 

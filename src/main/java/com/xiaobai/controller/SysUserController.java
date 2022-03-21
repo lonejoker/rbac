@@ -2,7 +2,9 @@ package com.xiaobai.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
+
 import com.xiaobai.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.xiaobai.service.SysUserService;
@@ -25,8 +27,8 @@ public class SysUserController {
     private SysUserService sysUserService;
 
     @GetMapping("/page")
-    public R sysUserPage(@RequestParam(required = false) Integer pageNum,@RequestParam(required = false) Integer pageSize) {
-        return sysUserService.sysUserPage(pageNum, pageSize);
+    public R sysUserPage(@RequestParam(required = false) Integer pageNum, @RequestParam(required = false) Integer pageSize,@RequestParam(required = false, defaultValue = "") String nickName) {
+        return sysUserService.sysUserPage(pageNum, pageSize,nickName);
     }
 
     @GetMapping("/getSysUserInfo")

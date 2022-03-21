@@ -29,7 +29,7 @@ public class LoginController {
         return loginService.login(userVo);
     }
 
-    @GetMapping("/logout")
+    @PostMapping("/logout")
     @SystemLog(businessName =  "用户退出")
     public R logout() {
         return loginService.logout();

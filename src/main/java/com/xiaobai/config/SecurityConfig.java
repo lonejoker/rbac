@@ -50,14 +50,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable() // 关闭csrf
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) // 不通过Session获取SecurityContext
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
                 .antMatchers("/user/login").anonymous() // 对于登录接口，允许匿名访问
                 .antMatchers("/user/registry").anonymous() // 对于登录接口，允许匿名访问
+                .antMatchers("/user/logout").authenticated() // 对于退出接口，必须认证后才可以
                 .anyRequest().authenticated(); // 除了上面之外的所有请求都要认证
-        // 配置认证过滤器
+        // 添加过滤器
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
+        // 关闭security默认注销借口 /logout
+        http.logout().disable();
         // 配置异常处理器
         http.exceptionHandling()
                 // 认证失败处理器
