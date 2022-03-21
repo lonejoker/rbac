@@ -25,4 +25,5 @@ public class UserRegistryVo {
     private String email;
     private String phone;
     private String radio;
+    private String roleName;
 }

@@ -16,6 +16,7 @@ import com.xiaobai.vo.LoginUserVo;
 import com.xiaobai.vo.RoleVo;
 import com.xiaobai.vo.UserRegistryVo;
 import com.xiaobai.vo.UserVo;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -175,7 +176,11 @@ public class LoginServiceImpl implements LoginService {
         sysUser.setEmail(userRegistryVo.getEmail());
         sysUser.setPhone(userRegistryVo.getPhone());
         sysUser.setSex(userRegistryVo.getRadio());
-        sysUser.setRoleName(MyEnum.ROLE_USER + id);
+        if (StringUtils.isNotEmpty(userRegistryVo.getRoleName())) {
+            sysUser.setRoleName(userRegistryVo.getRoleName());
+        } else {
+            sysUser.setRoleName(MyEnum.ROLE_USER + id);
+        }
         sysUser.setCreateTime(DateUtil.date());
         sysUser.setUpdateTime(DateUtil.date());
         insertRole(MyEnum.ROLE_USER + id);
