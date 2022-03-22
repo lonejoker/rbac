@@ -1,6 +1,7 @@
 package com.xiaobai.service.impl;
 
 import cn.hutool.core.date.DateUtil;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.xiaobai.entity.*;
 import com.xiaobai.enumeration.RInfo;
@@ -22,7 +23,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -149,7 +149,7 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public R registry(UserRegistryVo userRegistryVo) throws IllegalAccessException {
-        if (!EntityNull.reflect(userRegistryVo)) {
+        if (!PubMethod.reflect(userRegistryVo)) {
             insertInfo(userRegistryVo);
             return R.successCm();
         }
@@ -164,6 +164,12 @@ public class LoginServiceImpl implements LoginService {
 
 
     private SysUser insertUser(UserRegistryVo userRegistryVo) {
+        LambdaQueryWrapper<SysUser> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.select(SysUser::getRoleName);
+        List<String> list = new ArrayList<>();
+        for (SysUser sysUser : sysUserMapper.selectList(queryWrapper)) {
+            list.add(sysUser.getRoleName());
+        }
         QueryWrapper<SysUser> wrapper = new QueryWrapper<>();
         wrapper.select("id")
                 .orderByDesc("id")
@@ -176,14 +182,22 @@ public class LoginServiceImpl implements LoginService {
         sysUser.setEmail(userRegistryVo.getEmail());
         sysUser.setPhone(userRegistryVo.getPhone());
         sysUser.setSex(userRegistryVo.getRadio());
-        if (StringUtils.isNotEmpty(userRegistryVo.getRoleName())) {
+        if (list.contains(userRegistryVo.getRoleName())) {
+            sysUser.setRoleName(userRegistryVo.getRoleName() + MyEnum.NEW);
+        } else if (StringUtils.isNotEmpty(userRegistryVo.getRoleName())) {
             sysUser.setRoleName(userRegistryVo.getRoleName());
         } else {
             sysUser.setRoleName(MyEnum.ROLE_USER + id);
         }
         sysUser.setCreateTime(DateUtil.date());
         sysUser.setUpdateTime(DateUtil.date());
-        insertRole(MyEnum.ROLE_USER + id);
+        if (list.contains(userRegistryVo.getRoleName())) {
+            insertRole(userRegistryVo.getRoleName() + MyEnum.NEW);
+        } else if(StringUtils.isNotEmpty(userRegistryVo.getRoleName())){
+            insertRole(userRegistryVo.getRoleName());
+        }else{
+            insertRole(MyEnum.ROLE_USER + id);
+        }
         return sysUser;
     }
 
