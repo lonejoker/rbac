@@ -14,4 +14,6 @@ import java.util.List;
  */
 public interface SysMenuMapper extends BaseMapper<SysMenu> {
     List<String> selectByUserId(Long id);
+
+    String getMenuName(Long menuid);
 }

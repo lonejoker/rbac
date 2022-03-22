@@ -1242,3 +1242,1239 @@
 
 2022-03-22 13:24:09.056 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2022-03-22 13:24:09.063 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 13:24:15.574 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 20708 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 13:24:15.577 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 13:24:16.183 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 13:24:16.185 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 13:24:16.211 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2022-03-22 13:24:16.706 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 13:24:16.712 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 13:24:16.712 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 13:24:16.712 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 13:24:16.769 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 13:24:16.770 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1145 ms
+2022-03-22 13:24:18.599 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 13:24:18.638 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 13:24:18.649 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 13:24:18.656 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.516 seconds (JVM running for 4.373)
+2022-03-22 13:25:57.647 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 13:25:57.647 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 13:25:57.648 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 13:25:57.735 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 13:25:57.735 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/registry
+2022-03-22 13:25:57.736 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户注册
+2022-03-22 13:25:57.736 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 13:25:57.736 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.registry
+2022-03-22 13:25:57.736 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 13:25:57.747 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[{"email":"112@qq.com","password":"112","phone":"112","radio":"0","roleName":"","userName":"112"}]
+2022-03-22 13:25:57.795 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 13:25:57.892 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 13:25:58.043 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 13:25:58.049 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 13:26:16.839 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 13:26:16.840 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/registry
+2022-03-22 13:26:16.840 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户注册
+2022-03-22 13:26:16.840 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 13:26:16.840 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.registry
+2022-03-22 13:26:16.840 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 13:26:16.840 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[{"email":"112@qq.com","password":"112","phone":"112","radio":"0","roleName":"测试","userName":"112"}]
+2022-03-22 13:26:16.941 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 13:26:16.945 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 13:26:33.695 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 13:26:33.695 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRoles
+2022-03-22 13:26:33.695 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单
+2022-03-22 13:26:33.696 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 13:26:33.696 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.roleLogin
+2022-03-22 13:26:33.696 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 13:26:33.696 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["测试"]
+2022-03-22 13:26:33.720 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"role":[{"children":[],"component":"index/Index","id":1,"menuName":"首页","path":"/index","perms":"index","remark":"首页"}]},"msg":"操作成功"}
+2022-03-22 13:26:33.725 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 13:26:43.767 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 13:26:43.768 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/registry
+2022-03-22 13:26:43.768 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户注册
+2022-03-22 13:26:43.768 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 13:26:43.768 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.registry
+2022-03-22 13:26:43.768 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 13:26:43.768 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[{"email":"112@qq.com","password":"112","phone":"112","radio":"0","roleName":"ROLE_USER12","userName":"112"}]
+2022-03-22 13:26:43.875 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 13:26:43.880 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 14:49:58.831 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 14:49:58.832 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/logout
+2022-03-22 14:49:58.832 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户退出
+2022-03-22 14:49:58.833 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 14:49:58.833 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.logout
+2022-03-22 14:49:58.833 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 14:49:58.833 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 14:49:58.872 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 14:49:58.884 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 14:50:00.216 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 14:50:00.216 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/login
+2022-03-22 14:50:00.216 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户登录
+2022-03-22 14:50:00.216 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 14:50:00.216 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.login
+2022-03-22 14:50:00.216 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 14:50:00.219 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[{"password":"1","userName":"xb"}]
+2022-03-22 14:50:00.460 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"roles":[{"children":[],"component":"index/Index","id":1,"menuName":"首页","path":"/index","perms":"index","remark":"首页"},{"children":[{"children":[],"component":"system/menu/Menu","createTime":1647616793000,"delFlag":0,"id":3,"menuName":"菜单管理","parentId":2,"path":"/menu","perms":"menu","remark":"菜单管理","status":"0","updateTime":1647616795000,"visible":"0"}],"component":"system/System","id":2,"menuName":"系统设置","path":"/system","perms":"system","remark":"系统管理"}],"user":{"email":"56844285@qq.com","id":1,"nickName":"小白","phone":"13524685246","roleName":"ROLE_ADMIN","sex":"0","status":"0","userAvatar":"https://w.wallhaven.cc/full/dp/wallhaven-dpqjwj.jpg","userName":"xb","userType":"0"},"token":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI3ODBjY2Q5OGYwMmM0YjU3OTJhM2U2YTg4MzkyNjE2MSIsInN1YiI6IjEiLCJpc3MiOiJ4aWFvYmFpIiwiaWF0IjoxNjQ3OTMxODAwLCJleHAiOjE2NDgwMTgyMDB9.Ell49vjq-38TgxtuXt0XFkjU1fNeLDzKetBxxVDHU6c"},"msg":"操作成功"}
+2022-03-22 14:50:00.467 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 14:50:12.176 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 14:50:12.176 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/logout
+2022-03-22 14:50:12.176 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户退出
+2022-03-22 14:50:12.176 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 14:50:12.176 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.logout
+2022-03-22 14:50:12.176 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 14:50:12.176 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 14:50:12.178 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 14:50:12.184 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 14:50:39.687 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 14:50:39.687 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/login
+2022-03-22 14:50:39.687 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户登录
+2022-03-22 14:50:39.687 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 14:50:39.687 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.login
+2022-03-22 14:50:39.687 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 14:50:39.688 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[{"password":"1","userName":"xb"}]
+2022-03-22 14:50:39.782 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"roles":[{"children":[],"component":"index/Index","id":1,"menuName":"首页","path":"/index","perms":"index","remark":"首页"},{"children":[{"children":[],"component":"system/menu/Menu","createTime":1647616793000,"delFlag":0,"id":3,"menuName":"菜单管理","parentId":2,"path":"/menu","perms":"menu","remark":"菜单管理","status":"0","updateTime":1647616795000,"visible":"0"}],"component":"system/System","id":2,"menuName":"系统设置","path":"/system","perms":"system","remark":"系统管理"}],"user":{"email":"56844285@qq.com","id":1,"nickName":"小白","phone":"13524685246","roleName":"ROLE_ADMIN","sex":"0","status":"0","userAvatar":"https://w.wallhaven.cc/full/dp/wallhaven-dpqjwj.jpg","userName":"xb","userType":"0"},"token":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyMjZmZjA3NjhjOWI0ZGIzYjc2NWI5OGM0MmZlMTI0NCIsInN1YiI6IjEiLCJpc3MiOiJ4aWFvYmFpIiwiaWF0IjoxNjQ3OTMxODM5LCJleHAiOjE2NDgwMTgyMzl9.bTU6nc2Oze9jUwca-tLC_c4UqLjDLB3frG4vwo5B-zQ"},"msg":"操作成功"}
+2022-03-22 14:50:39.788 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 16:10:07.153 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 16:10:07.154 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRoles
+2022-03-22 16:10:07.154 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单
+2022-03-22 16:10:07.154 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 16:10:07.154 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.roleLogin
+2022-03-22 16:10:07.154 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 16:10:07.154 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["测试"]
+2022-03-22 16:10:07.159 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"role":[{"children":[],"component":"index/Index","id":1,"menuName":"首页","path":"/index","perms":"index","remark":"首页"}]},"msg":"操作成功"}
+2022-03-22 16:10:07.165 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 19:48:34.628 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 19:48:34.638 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 19:48:43.573 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 26396 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 19:48:43.576 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 19:48:44.622 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 19:48:44.624 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 19:48:44.646 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-03-22 19:48:45.234 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 19:48:45.241 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 19:48:45.242 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 19:48:45.242 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 19:48:45.321 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 19:48:45.321 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1713 ms
+2022-03-22 19:48:47.265 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 19:48:47.306 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 19:48:47.319 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 19:48:47.327 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 4.312 seconds (JVM running for 5.474)
+2022-03-22 19:51:15.694 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 19:51:15.694 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 19:51:15.695 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-03-22 19:51:15.788 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 19:51:15.788 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/registry
+2022-03-22 19:51:15.789 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户注册
+2022-03-22 19:51:15.789 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 19:51:15.789 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.registry
+2022-03-22 19:51:15.789 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 19:51:15.798 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[{"email":"21@qq.com","password":"21","phone":"21","radio":"0","roleName":"demo","userName":"21"}]
+2022-03-22 19:51:15.844 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 19:51:16.075 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 19:51:16.236 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 19:51:16.242 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 19:53:42.172 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 19:53:42.178 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 19:53:50.841 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 23740 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 19:53:50.844 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 19:53:51.512 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 19:53:51.513 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 19:53:51.536 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 19:53:52.084 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 19:53:52.091 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 19:53:52.092 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 19:53:52.092 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 19:53:52.146 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 19:53:52.147 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1247 ms
+2022-03-22 19:53:54.183 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 19:53:54.224 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 19:53:54.240 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 19:53:54.247 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 4.018 seconds (JVM running for 5.159)
+2022-03-22 19:54:15.838 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 19:54:15.838 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 19:54:15.839 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 19:54:15.928 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 19:54:15.928 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/login
+2022-03-22 19:54:15.929 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户登录
+2022-03-22 19:54:15.929 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 19:54:15.929 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.login
+2022-03-22 19:54:15.929 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 19:54:15.938 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[{"password":"1","userName":"xb"}]
+2022-03-22 19:54:16.073 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 19:54:16.173 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 19:54:17.895 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"roles":[{"children":[],"component":"index/Index","id":1,"menuName":"首页","path":"/index","perms":"index","remark":"首页"},{"children":[{"children":[],"component":"system/menu/Menu","createTime":1647616793000,"delFlag":0,"id":3,"menuName":"菜单管理","parentId":2,"path":"/menu","perms":"menu","remark":"菜单管理","status":"0","updateTime":1647616795000,"visible":"0"}],"component":"system/System","id":2,"menuName":"系统设置","path":"/system","perms":"system","remark":"系统管理"}],"user":{"email":"56844285@qq.com","id":1,"nickName":"小白","phone":"13524685246","roleName":"ROLE_ADMIN","sex":"0","status":"0","userAvatar":"https://w.wallhaven.cc/full/dp/wallhaven-dpqjwj.jpg","userName":"xb","userType":"0"},"token":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwYTlkNTdkNzE1MWE0NDc1OTUwYTk0YjQwNGNlMjBhOSIsInN1YiI6IjEiLCJpc3MiOiJ4aWFvYmFpIiwiaWF0IjoxNjQ3OTUwMDU2LCJleHAiOjE2NDgwMzY0NTZ9.UDPJ5xQQKiy4ZRCer32qPbL2rTzYWVT13CszwUO3ago"},"msg":"操作成功"}
+2022-03-22 19:54:17.909 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 19:55:00.786 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 19:55:00.786 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 19:55:00.786 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 19:55:00.786 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 19:55:00.786 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 19:55:00.786 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 19:55:00.786 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 19:55:00.791 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 19:55:00.797 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 19:57:34.311 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 19:57:34.311 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/logout
+2022-03-22 19:57:34.311 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户退出
+2022-03-22 19:57:34.311 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 19:57:34.311 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.logout
+2022-03-22 19:57:34.311 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 19:57:34.311 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 19:57:34.313 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 19:57:34.320 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 19:57:35.505 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 19:57:35.505 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/login
+2022-03-22 19:57:35.505 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：用户登录
+2022-03-22 19:57:35.505 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：POST
+2022-03-22 19:57:35.505 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.login
+2022-03-22 19:57:35.505 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 19:57:35.505 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[{"password":"1","userName":"xb"}]
+2022-03-22 19:57:35.590 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"roles":[{"children":[],"component":"index/Index","id":1,"menuName":"首页","path":"/index","perms":"index","remark":"首页"},{"children":[{"children":[],"component":"system/menu/Menu","createTime":1647616793000,"delFlag":0,"id":3,"menuName":"菜单管理","parentId":2,"path":"/menu","perms":"menu","remark":"菜单管理","status":"0","updateTime":1647616795000,"visible":"0"}],"component":"system/System","id":2,"menuName":"系统设置","path":"/system","perms":"system","remark":"系统管理"}],"user":{"email":"56844285@qq.com","id":1,"nickName":"小白","phone":"13524685246","roleName":"ROLE_ADMIN","sex":"0","status":"0","userAvatar":"https://w.wallhaven.cc/full/dp/wallhaven-dpqjwj.jpg","userName":"xb","userType":"0"},"token":"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxNDUwNGY5ZjYyMjE0YTA5OTIyMmQ5YzRmMjk4ZmQwNyIsInN1YiI6IjEiLCJpc3MiOiJ4aWFvYmFpIiwiaWF0IjoxNjQ3OTUwMjU1LCJleHAiOjE2NDgwMzY2NTV9.hB4ksV8fs600ETbPc9uTNvSApsRxQguAKOju0Kd614U"},"msg":"操作成功"}
+2022-03-22 19:57:35.596 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 19:57:39.516 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 19:57:39.517 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 19:57:39.517 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 19:57:39.517 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 19:57:39.517 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 19:57:39.517 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 19:57:39.517 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 19:57:39.519 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 19:57:39.528 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 19:58:46.241 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 19:58:46.241 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 19:58:46.241 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 19:58:46.241 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 19:58:46.241 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 19:58:46.241 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 19:58:46.241 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 19:58:46.243 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 19:58:46.249 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 19:59:35.838 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 19:59:35.838 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 19:59:35.838 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 19:59:35.838 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 19:59:35.838 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 19:59:35.838 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 19:59:35.838 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 19:59:35.840 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 19:59:35.846 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 19:59:40.752 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 19:59:40.752 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 19:59:40.752 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 19:59:40.752 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 19:59:40.752 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 19:59:40.752 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 19:59:40.752 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 19:59:40.754 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 19:59:40.759 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:01:29.057 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:01:29.057 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 20:01:29.057 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 20:01:29.057 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:01:29.057 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 20:01:29.057 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 20:01:29.057 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 20:01:29.059 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 20:01:29.065 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:03:27.263 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:03:27.264 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 20:03:27.264 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 20:03:27.264 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:03:27.264 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 20:03:27.264 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 20:03:27.264 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 20:03:27.265 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 20:03:27.272 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:03:44.350 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:03:44.350 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 20:03:44.350 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 20:03:44.350 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:03:44.350 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 20:03:44.350 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 20:03:44.350 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 20:03:44.352 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 20:03:44.359 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:04:32.120 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:04:32.120 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 20:04:32.120 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 20:04:32.120 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:04:32.120 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 20:04:32.120 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 20:04:32.120 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 20:04:32.122 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 20:04:32.129 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:05:23.094 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:05:23.094 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 20:05:23.094 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 20:05:23.094 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:05:23.094 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 20:05:23.094 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 20:05:23.094 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 20:05:23.096 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 20:05:23.101 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:05:58.973 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:05:58.973 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 20:05:58.973 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 20:05:58.973 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:05:58.973 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 20:05:58.973 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 20:05:58.973 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 20:05:58.975 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 20:05:58.980 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:11:04.035 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:11:04.044 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:11:10.964 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 11244 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:11:10.967 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:11:11.619 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:11:11.620 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:11:11.643 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:11:12.133 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:11:12.138 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:11:12.139 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:11:12.139 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:11:12.199 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:11:12.199 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1180 ms
+2022-03-22 20:11:13.986 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:11:14.025 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:11:14.037 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:11:14.044 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.521 seconds (JVM running for 4.392)
+2022-03-22 20:11:53.696 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:11:53.696 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:11:53.697 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:12:08.560 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:12:08.560 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:12:08.561 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:12:08.561 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:12:08.561 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:12:08.561 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:12:08.562 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER"]
+2022-03-22 20:12:08.576 [http-nio-9999-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:12:08.669 [http-nio-9999-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:12:08.850 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{},"msg":"操作成功"}
+2022-03-22 20:12:08.863 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:12:41.280 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:12:41.280 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:12:41.280 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:12:41.280 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:12:41.280 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:12:41.280 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:12:41.281 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER2"]
+2022-03-22 20:12:41.291 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"menuName":"首页"},"msg":"操作成功"}
+2022-03-22 20:12:41.297 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:12:49.545 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:12:49.545 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:12:49.545 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:12:49.545 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:12:49.545 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:12:49.545 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:12:49.545 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:12:49.550 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"menuName":"系统设置"},"msg":"操作成功"}
+2022-03-22 20:12:49.554 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:14:21.957 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:14:21.958 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:14:21.958 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:14:21.958 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:14:21.958 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:14:21.958 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:14:21.958 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:14:21.963 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"menuName":"系统设置"},"msg":"操作成功"}
+2022-03-22 20:14:21.969 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:14:34.249 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:14:34.249 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRoles
+2022-03-22 20:14:34.249 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单
+2022-03-22 20:14:34.249 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:14:34.249 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.roleLogin
+2022-03-22 20:14:34.249 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:14:34.249 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:14:34.261 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"role":[{"children":[],"component":"index/Index","id":1,"menuName":"首页","path":"/index","perms":"index","remark":"首页"},{"children":[{"children":[],"component":"system/menu/Menu","createTime":1647616793000,"delFlag":0,"id":3,"menuName":"菜单管理","parentId":2,"path":"/menu","perms":"menu","remark":"菜单管理","status":"0","updateTime":1647616795000,"visible":"0"}],"component":"system/System","id":2,"menuName":"系统设置","path":"/system","perms":"system","remark":"系统管理"}]},"msg":"操作成功"}
+2022-03-22 20:14:34.267 [http-nio-9999-exec-10] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:14:42.414 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:14:42.414 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:14:42.414 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:14:42.414 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:14:42.415 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:14:42.415 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:14:42.415 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:14:42.421 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{"menuName":"系统设置"},"msg":"操作成功"}
+2022-03-22 20:14:42.426 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:26:50.320 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:26:50.327 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:26:56.826 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 23208 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:26:56.828 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:26:57.449 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:26:57.451 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:26:57.476 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:26:57.970 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:26:57.976 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:26:57.977 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:26:57.977 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:26:58.029 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:26:58.029 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1155 ms
+2022-03-22 20:26:59.789 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:26:59.827 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:26:59.840 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:26:59.846 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.499 seconds (JVM running for 4.394)
+2022-03-22 20:27:01.383 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:27:01.383 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:27:01.384 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:27:02.728 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:27:02.728 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:27:02.729 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:27:02.729 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:27:02.729 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:27:02.729 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:27:02.732 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:27:02.747 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:27:02.858 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:27:03.046 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":{},"msg":"操作成功"}
+2022-03-22 20:27:03.060 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:30:18.544 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:30:18.551 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:30:24.871 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 24120 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:30:24.875 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:30:25.531 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:30:25.533 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:30:25.553 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:30:26.029 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:30:26.034 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:30:26.035 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:30:26.035 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:30:26.087 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:30:26.087 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1157 ms
+2022-03-22 20:30:27.866 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:30:27.909 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:30:27.921 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:30:27.930 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.566 seconds (JVM running for 4.726)
+2022-03-22 20:30:27.976 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:30:27.977 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:30:27.978 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:30:29.657 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:30:29.657 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:30:29.658 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:30:29.658 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:30:29.658 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:30:29.658 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:30:29.661 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:30:29.680 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:30:29.787 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:30:29.942 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:30:29.971 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:31:01.337 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:31:01.337 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:31:01.337 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:31:01.337 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:31:01.337 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:31:01.337 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:31:01.337 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER2"]
+2022-03-22 20:31:01.341 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:31:01.346 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:31:18.222 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:31:18.222 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:31:18.222 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:31:18.222 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:31:18.222 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:31:18.222 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:31:18.223 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:31:18.226 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:31:18.231 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:31:25.292 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:31:25.292 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:31:25.292 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:31:25.292 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:31:25.292 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:31:25.292 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:31:25.293 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER5"]
+2022-03-22 20:31:25.295 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:31:25.301 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:31:28.769 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:31:28.769 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:31:28.769 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:31:28.769 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:31:28.769 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:31:28.769 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:31:28.769 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER2"]
+2022-03-22 20:31:28.772 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:31:28.777 [http-nio-9999-exec-9] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:32:55.070 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:32:55.070 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:32:55.070 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:32:55.070 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:32:55.070 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:32:55.071 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:32:55.071 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER12"]
+2022-03-22 20:32:55.074 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:32:55.079 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:33:04.950 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:33:04.951 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:33:04.951 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:33:04.951 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:33:04.951 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:33:04.951 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:33:04.951 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER1"]
+2022-03-22 20:33:04.953 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:33:04.958 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:33:08.119 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:33:08.119 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:33:08.119 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:33:08.119 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:33:08.119 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:33:08.119 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:33:08.119 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER2"]
+2022-03-22 20:33:08.122 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:33:08.127 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:33:10.747 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:33:10.747 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:33:10.747 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:33:10.747 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:33:10.747 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:33:10.747 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:33:10.747 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER3"]
+2022-03-22 20:33:10.749 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:33:10.754 [http-nio-9999-exec-7] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:36:11.565 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:36:11.570 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:36:17.324 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 22948 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:36:17.328 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:36:17.899 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:36:17.900 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:36:17.920 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:36:18.386 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:36:18.392 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:36:18.393 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:36:18.393 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:36:18.446 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:36:18.446 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1070 ms
+2022-03-22 20:36:20.307 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:36:20.349 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:36:20.363 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:36:20.370 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.528 seconds (JVM running for 4.602)
+2022-03-22 20:36:23.438 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:36:23.438 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:36:23.439 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:36:24.771 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:36:24.772 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:36:24.772 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:36:24.772 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:36:24.772 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:36:24.773 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:36:24.775 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER3"]
+2022-03-22 20:36:24.792 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:36:24.884 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:36:25.031 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:36:25.054 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:36:28.279 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:36:28.279 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:36:28.279 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:36:28.279 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:36:28.279 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:36:28.279 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:36:28.280 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER5"]
+2022-03-22 20:36:28.283 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:36:28.287 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:36:31.781 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:36:31.782 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:36:31.782 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:36:31.782 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:36:31.782 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:36:31.782 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:36:31.783 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER8"]
+2022-03-22 20:36:31.786 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:36:31.792 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:38:03.248 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:38:03.254 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:38:07.882 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 22976 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:38:07.885 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:38:08.484 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:38:08.486 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:38:08.509 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:38:09.138 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:38:09.197 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1265 ms
+2022-03-22 20:38:11.886 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:38:11.936 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:38:11.943 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 4.968 seconds (JVM running for 5.9)
+2022-03-22 20:38:17.911 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 25884 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:38:17.914 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:38:18.636 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:38:18.639 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:38:18.666 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:38:19.152 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:38:19.158 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:38:19.159 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:38:19.159 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:38:19.212 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:38:19.212 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1262 ms
+2022-03-22 20:38:20.934 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:38:20.971 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:38:20.983 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:38:20.990 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.497 seconds (JVM running for 4.412)
+2022-03-22 20:38:22.660 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:38:22.661 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:38:22.662 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:38:24.026 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:38:24.027 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:38:24.028 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:38:24.028 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:38:24.028 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:38:24.028 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:38:24.031 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER8"]
+2022-03-22 20:38:24.046 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:38:24.138 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:38:24.279 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:38:24.302 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:38:31.373 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:38:31.373 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:38:31.373 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:38:31.373 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:38:31.373 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:38:31.373 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:38:31.373 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:38:31.376 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:38:31.383 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:40:48.672 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:40:48.690 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:40:54.440 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 25428 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:40:54.443 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:40:55.041 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:40:55.043 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:40:55.066 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:40:55.543 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:40:55.549 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:40:55.549 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:40:55.550 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:40:55.603 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:40:55.603 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1110 ms
+2022-03-22 20:40:57.363 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:40:57.405 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:40:57.418 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:40:57.425 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.479 seconds (JVM running for 4.626)
+2022-03-22 20:40:59.105 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:40:59.106 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:40:59.106 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-03-22 20:41:00.528 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:41:00.528 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:41:00.529 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:41:00.529 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:41:00.529 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:41:00.529 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:41:00.532 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:41:00.549 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:41:00.664 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:41:00.820 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:41:00.844 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:41:23.245 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:41:23.252 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:41:26.943 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 25316 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:41:26.946 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:41:27.565 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:41:27.566 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:41:27.588 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:41:28.076 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:41:28.081 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:41:28.082 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:41:28.082 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:41:28.134 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:41:28.135 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1149 ms
+2022-03-22 20:41:29.938 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:41:29.976 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:41:29.989 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:41:29.997 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.487 seconds (JVM running for 4.449)
+2022-03-22 20:41:31.752 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:41:31.752 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:41:31.753 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-03-22 20:41:33.092 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:41:33.092 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:41:33.093 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:41:33.093 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:41:33.093 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:41:33.093 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:41:33.096 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:41:33.111 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:41:33.203 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:41:33.365 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:41:33.392 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:41:42.239 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:41:42.239 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:41:42.239 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:41:42.239 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:41:42.239 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:41:42.239 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:41:42.239 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER2"]
+2022-03-22 20:41:42.243 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:41:42.247 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:42:48.659 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:42:48.667 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:42:54.412 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 21300 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:42:54.415 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:42:54.963 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:42:54.964 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:42:54.985 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:42:55.452 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:42:55.458 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:42:55.459 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:42:55.459 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:42:55.511 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:42:55.511 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1052 ms
+2022-03-22 20:42:57.435 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:42:57.501 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:42:57.518 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:42:57.533 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.549 seconds (JVM running for 4.409)
+2022-03-22 20:43:05.760 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:43:05.760 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:43:05.762 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-03-22 20:43:07.646 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:43:07.646 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:43:07.647 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:43:07.647 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:43:07.647 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:43:07.647 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:43:07.650 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:43:07.667 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:43:07.771 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:43:07.927 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:43:07.950 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:44:51.074 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:44:51.079 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:44:58.219 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 25940 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:44:58.222 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:44:58.882 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:44:58.884 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:44:58.904 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:44:59.384 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:44:59.390 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:44:59.390 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:44:59.391 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:44:59.444 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:44:59.444 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1171 ms
+2022-03-22 20:45:01.316 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:45:01.369 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:45:01.385 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:45:01.392 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.648 seconds (JVM running for 4.56)
+2022-03-22 20:45:06.622 [http-nio-9999-exec-4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:45:06.622 [http-nio-9999-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:45:06.623 [http-nio-9999-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:45:08.009 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:45:08.009 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:45:08.010 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:45:08.010 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:45:08.010 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:45:08.010 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:45:08.013 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:45:08.027 [http-nio-9999-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:45:08.114 [http-nio-9999-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:45:08.292 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Response          ：null
+2022-03-22 20:45:08.303 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:45:47.693 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:45:47.700 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:45:53.558 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 3824 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:45:53.562 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:45:54.146 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:45:54.148 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:45:54.168 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:45:54.641 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:45:54.647 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:45:54.647 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:45:54.647 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:45:54.701 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:45:54.701 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1098 ms
+2022-03-22 20:45:56.492 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:45:56.531 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:45:56.544 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:45:56.551 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.44 seconds (JVM running for 4.333)
+2022-03-22 20:45:57.843 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:45:57.843 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:45:57.844 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:45:59.294 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:45:59.295 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:45:59.295 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:45:59.295 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:45:59.295 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:45:59.296 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:45:59.298 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:45:59.314 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:45:59.406 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:45:59.596 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["首页","系统设置","菜单管理"],"msg":"操作成功"}
+2022-03-22 20:45:59.611 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:46:07.737 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:46:07.738 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:46:07.738 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:46:07.738 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:46:07.738 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:46:07.738 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:46:07.738 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER2"]
+2022-03-22 20:46:07.743 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["首页","系统设置","菜单管理"],"msg":"操作成功"}
+2022-03-22 20:46:07.748 [http-nio-9999-exec-4] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:46:09.531 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:46:09.531 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:46:09.531 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:46:09.531 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:46:09.531 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:46:09.531 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:46:09.531 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER2"]
+2022-03-22 20:46:09.535 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["首页","系统设置","菜单管理"],"msg":"操作成功"}
+2022-03-22 20:46:09.540 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:46:30.188 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:46:30.188 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:46:30.188 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:46:30.188 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:46:30.188 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:46:30.188 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:46:30.188 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER6"]
+2022-03-22 20:46:30.192 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["首页","系统设置","菜单管理"],"msg":"操作成功"}
+2022-03-22 20:46:30.198 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:47:42.616 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:47:42.622 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:47:48.663 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 21732 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:47:48.667 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:47:49.317 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:47:49.318 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:47:49.340 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:47:49.814 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:47:49.821 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:47:49.822 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:47:49.822 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:47:49.876 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:47:49.876 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1168 ms
+2022-03-22 20:47:51.663 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:47:51.706 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:47:51.718 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:47:51.725 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.553 seconds (JVM running for 4.705)
+2022-03-22 20:47:52.063 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:47:52.064 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:47:52.064 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-03-22 20:47:53.603 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:47:53.604 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:47:53.605 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:47:53.605 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:47:53.605 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:47:53.605 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:47:53.607 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER6"]
+2022-03-22 20:47:53.625 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:47:53.720 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:47:53.910 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":[],"msg":"操作成功"}
+2022-03-22 20:47:53.921 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:47:58.453 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:47:58.454 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:47:58.454 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:47:58.454 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:47:58.454 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:47:58.454 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:47:58.454 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER2"]
+2022-03-22 20:47:58.461 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":[],"msg":"操作成功"}
+2022-03-22 20:47:58.465 [http-nio-9999-exec-5] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:48:01.263 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:48:01.263 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:48:01.263 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:48:01.263 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:48:01.263 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:48:01.263 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:48:01.264 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER1"]
+2022-03-22 20:48:01.268 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":[],"msg":"操作成功"}
+2022-03-22 20:48:01.274 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:48:05.779 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:48:05.779 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:48:05.779 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:48:05.779 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:48:05.779 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:48:05.779 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:48:05.779 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:48:05.783 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":[],"msg":"操作成功"}
+2022-03-22 20:48:05.789 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:49:37.364 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:49:37.369 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:49:43.752 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 4288 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:49:43.756 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:49:44.356 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:49:44.357 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:49:44.378 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:49:44.861 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:49:44.867 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:49:44.867 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:49:44.867 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:49:44.920 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:49:44.920 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1117 ms
+2022-03-22 20:49:46.672 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:49:46.709 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:49:46.722 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:49:46.730 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.465 seconds (JVM running for 4.434)
+2022-03-22 20:49:48.143 [http-nio-9999-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:49:48.144 [http-nio-9999-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:49:48.145 [http-nio-9999-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:49:49.606 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:49:49.606 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:49:49.607 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:49:49.607 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:49:49.607 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:49:49.607 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:49:49.609 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:49:49.625 [http-nio-9999-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:49:49.718 [http-nio-9999-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:49:49.926 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":[],"msg":"操作成功"}
+2022-03-22 20:49:49.939 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:50:33.755 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:50:33.763 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:50:38.178 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 23728 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:50:38.182 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:50:38.761 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:50:38.762 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:50:38.783 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:50:39.236 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:50:39.242 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:50:39.242 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:50:39.243 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:50:39.296 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:50:39.296 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1062 ms
+2022-03-22 20:50:41.032 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:50:41.067 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:50:41.080 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:50:41.086 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.425 seconds (JVM running for 4.41)
+2022-03-22 20:50:45.512 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:50:45.512 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:50:45.514 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-03-22 20:50:46.863 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:50:46.864 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:50:46.865 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:50:46.865 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:50:46.865 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:50:46.865 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:50:46.868 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:50:46.884 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:50:46.979 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:50:47.193 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":[],"msg":"操作成功"}
+2022-03-22 20:50:47.205 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:53:45.324 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:53:45.330 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:53:52.962 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 16876 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:53:52.964 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:53:53.590 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:53:53.591 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:53:53.616 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:53:54.103 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:53:54.110 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:53:54.111 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:53:54.111 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:53:54.167 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:53:54.168 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1159 ms
+2022-03-22 20:53:55.926 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:53:55.965 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:53:55.979 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:53:55.986 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.474 seconds (JVM running for 4.669)
+2022-03-22 20:53:59.664 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:53:59.665 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:53:59.667 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-03-22 20:54:01.234 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:54:01.235 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:54:01.237 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:54:01.237 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:54:01.237 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:54:01.237 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:54:01.241 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:54:01.282 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:54:01.442 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:54:01.636 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 20:54:01.649 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:54:19.940 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:54:19.949 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:54:25.672 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 23808 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:54:25.674 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:54:26.292 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:54:26.294 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:54:26.316 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:54:26.783 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:54:26.788 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:54:26.789 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:54:26.789 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:54:26.840 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:54:26.840 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1131 ms
+2022-03-22 20:54:29.198 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:54:29.233 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:54:29.246 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:54:29.254 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 4.067 seconds (JVM running for 5.218)
+2022-03-22 20:54:35.868 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:54:35.869 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:54:35.871 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2022-03-22 20:54:37.469 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:54:37.470 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:54:37.471 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:54:37.471 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:54:37.471 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:54:37.471 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:54:37.473 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:54:37.487 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:54:37.576 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:54:37.769 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 20:54:37.780 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:54:42.777 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:54:42.783 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:54:48.061 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 23216 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:54:48.064 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:54:48.664 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:54:48.666 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:54:48.689 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:54:49.141 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:54:49.146 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:54:49.147 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:54:49.147 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:54:49.198 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:54:49.199 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1089 ms
+2022-03-22 20:54:51.107 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:54:51.145 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:54:51.158 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:54:51.164 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.53 seconds (JVM running for 4.402)
+2022-03-22 20:54:53.428 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:54:53.428 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:54:53.429 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:54:55.241 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:54:55.242 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:54:55.243 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:54:55.243 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:54:55.243 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:54:55.243 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:54:55.246 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:54:55.266 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:54:55.360 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:54:55.548 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 20:54:55.560 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:56:40.616 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:56:40.623 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:56:46.477 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 22144 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:56:46.479 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:56:47.279 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:56:47.281 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:56:47.307 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:56:47.804 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:56:47.810 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:56:47.811 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:56:47.811 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:56:47.877 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:56:47.877 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1359 ms
+2022-03-22 20:56:49.655 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:56:49.693 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:56:49.707 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:56:49.714 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.75 seconds (JVM running for 4.69)
+2022-03-22 20:56:52.824 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:56:52.825 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:56:52.825 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-03-22 20:56:54.271 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:56:54.272 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:56:54.272 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:56:54.272 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:56:54.272 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:56:54.272 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:56:54.275 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:56:54.295 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:56:54.407 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:56:54.644 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 20:56:54.666 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:57:15.509 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:57:15.515 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:57:22.723 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 20232 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:57:22.727 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:57:23.639 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:57:23.642 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:57:23.729 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:57:24.562 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:57:24.989 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2223 ms
+2022-03-22 20:57:26.847 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:57:26.896 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:57:26.902 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 4.647 seconds (JVM running for 6.232)
+2022-03-22 20:57:33.095 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 4048 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:57:33.099 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:57:33.886 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:57:33.888 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:57:33.910 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:57:34.368 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:57:34.374 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:57:34.374 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:57:34.374 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:57:34.426 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:57:34.426 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1264 ms
+2022-03-22 20:57:36.316 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:57:36.355 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:57:36.368 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:57:36.375 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.779 seconds (JVM running for 4.707)
+2022-03-22 20:57:39.440 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:57:39.441 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:57:39.441 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-03-22 20:57:40.827 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:57:40.828 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:57:40.828 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:57:40.829 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:57:40.829 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:57:40.829 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:57:40.832 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:57:40.846 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:57:40.955 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:57:41.147 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"msg":"操作成功"}
+2022-03-22 20:57:41.159 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 20:58:25.770 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 20:58:25.779 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 20:58:31.341 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 21796 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 20:58:31.343 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 20:58:31.966 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 20:58:31.968 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 20:58:31.991 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-03-22 20:58:32.469 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 20:58:32.475 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:58:32.476 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 20:58:32.476 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 20:58:32.529 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 20:58:32.529 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1145 ms
+2022-03-22 20:58:34.278 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 20:58:34.314 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 20:58:34.326 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 20:58:34.334 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.484 seconds (JVM running for 4.417)
+2022-03-22 20:58:37.215 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 20:58:37.215 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 20:58:37.216 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 20:58:38.529 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 20:58:38.530 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 20:58:38.531 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 20:58:38.531 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 20:58:38.531 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 20:58:38.531 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 20:58:38.534 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 20:58:38.549 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 20:58:38.644 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 20:58:38.868 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":[[{"menuName":"首页"}],[{"menuName":"系统设置"}],[{"menuName":"菜单管理"}]],"msg":"操作成功"}
+2022-03-22 20:58:38.881 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 21:01:21.656 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 21:01:21.665 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2022-03-22 21:01:27.222 [main] INFO  com.xiaobai.RbacApplication - Starting RbacApplication using Java 1.8.0_181 on DESKTOP-VSPOVQC with PID 24524 (E:\程序代码\idea\rbac\target\classes started by xiaobai in E:\程序代码\idea\rbac)
+2022-03-22 21:01:27.225 [main] INFO  com.xiaobai.RbacApplication - No active profile set, falling back to 1 default profile: "default"
+2022-03-22 21:01:27.832 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-22 21:01:27.833 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-03-22 21:01:27.854 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2022-03-22 21:01:28.307 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-03-22 21:01:28.313 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-03-22 21:01:28.314 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-03-22 21:01:28.314 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-22 21:01:28.369 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-03-22 21:01:28.369 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1105 ms
+2022-03-22 21:01:30.196 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will not secure any request
+2022-03-22 21:01:30.236 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-03-22 21:01:30.250 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-03-22 21:01:30.257 [main] INFO  com.xiaobai.RbacApplication - Started RbacApplication in 3.539 seconds (JVM running for 4.627)
+2022-03-22 21:01:31.710 [http-nio-9999-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-22 21:01:31.710 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-03-22 21:01:31.711 [http-nio-9999-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-03-22 21:01:33.296 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 21:01:33.296 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 21:01:33.297 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 21:01:33.298 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 21:01:33.298 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 21:01:33.298 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 21:01:33.301 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_ADMIN"]
+2022-03-22 21:01:33.322 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-03-22 21:01:33.427 [http-nio-9999-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-03-22 21:01:33.642 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["首页","系统设置","菜单管理"],"msg":"操作成功"}
+2022-03-22 21:01:33.656 [http-nio-9999-exec-1] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 21:01:43.621 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 21:01:43.621 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 21:01:43.621 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 21:01:43.621 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 21:01:43.621 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 21:01:43.621 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 21:01:43.621 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER2"]
+2022-03-22 21:01:43.630 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["首页"],"msg":"操作成功"}
+2022-03-22 21:01:43.636 [http-nio-9999-exec-2] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 21:01:47.779 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 21:01:47.779 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRole
+2022-03-22 21:01:47.779 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取权限菜单重载
+2022-03-22 21:01:47.779 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 21:01:47.779 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRole
+2022-03-22 21:01:47.779 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - IP                ：127.0.0.1
+2022-03-22 21:01:47.780 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：["ROLE_USER1"]
+2022-03-22 21:01:47.788 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["首页"],"msg":"操作成功"}
+2022-03-22 21:01:47.793 [http-nio-9999-exec-3] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 21:03:51.636 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 21:03:51.636 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 21:03:51.636 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 21:03:51.636 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 21:03:51.636 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 21:03:51.636 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 21:03:51.636 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 21:03:51.639 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 21:03:51.645 [http-nio-9999-exec-8] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 21:04:50.074 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========Start==========
+2022-03-22 21:04:50.074 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - URL               ：http://localhost:9999/user/getRolesName
+2022-03-22 21:04:50.074 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - BusinessName      ：获取角色列表
+2022-03-22 21:04:50.074 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Http Method       ：GET
+2022-03-22 21:04:50.074 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Class Method      ：com.xiaobai.controller.LoginController.getRolesName
+2022-03-22 21:04:50.074 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - IP                ：0:0:0:0:0:0:0:1
+2022-03-22 21:04:50.075 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Request Args      ：[]
+2022-03-22 21:04:50.076 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - Response          ：{"code":200,"data":["ROLE_ADMIN","ROLE_USER1","ROLE_USER2","ROLE_USER3","ROLE_USER4","ROLE_USER5","ROLE_USER6","ROLE_USER7","ROLE_USER8","ROLE_USER9","ROLE_USER10","ROLE_USER11","ROLE_USER12","测试","ROLE_USER12_NEW","demo"],"msg":"操作成功"}
+2022-03-22 21:04:50.084 [http-nio-9999-exec-6] INFO  com.xiaobai.aspect.LogAspect - ==========End==========
+
+2022-03-22 21:05:15.389 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-03-22 21:05:15.395 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

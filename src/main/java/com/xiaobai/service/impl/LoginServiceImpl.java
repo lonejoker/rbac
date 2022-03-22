@@ -6,10 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.xiaobai.entity.*;
 import com.xiaobai.enumeration.RInfo;
 import com.xiaobai.enums.MyEnum;
-import com.xiaobai.mapper.SysRoleMapper;
-import com.xiaobai.mapper.SysRoleMenuMapper;
-import com.xiaobai.mapper.SysUserMapper;
-import com.xiaobai.mapper.SysUserRoleMapper;
+import com.xiaobai.mapper.*;
 import com.xiaobai.service.LoginService;
 import com.xiaobai.service.SysMenuService;
 import com.xiaobai.utils.*;
@@ -50,6 +47,8 @@ public class LoginServiceImpl implements LoginService {
     private SysUserMapper sysUserMapper;
     @Autowired
     private SysUserRoleMapper sysUserRoleMapper;
+    @Autowired
+    private SysMenuMapper sysMenuMapper;
     @Autowired
     private RedisCache redisCache;
     @Autowired
@@ -156,6 +155,26 @@ public class LoginServiceImpl implements LoginService {
         return R.error(RInfo.ERROR4xx.getCode(), "请认真填写内容");
     }
 
+    @Override
+    public R getRolesName() {
+        List<String> rolesNameList = getRolesNames();
+        return R.successCmd(rolesNameList);
+    }
+
+    @Override
+    public R getRole(String roleName) {
+        return R.successCmd(getRoleMenus(roleName));
+    }
+
+    private List<Object> getRoleMenus(String roleName) {
+        List<Long> menuId = sysRoleMapper.selectRoleNames(sysRoleMapper.selectRoleIdByRoleName(roleName));
+        List<Object> list = new ArrayList<>();
+        for (int i = 0; i < menuId.size(); i++) {
+            list.add(sysMenuMapper.getMenuName(menuId.get(i)));
+        }
+        return list;
+    }
+
     private void insertInfo(UserRegistryVo userRegistryVo) {
         SysUser sysUser = insertUser(userRegistryVo);
         sysUserMapper.insert(sysUser);
@@ -164,12 +183,13 @@ public class LoginServiceImpl implements LoginService {
 
 
     private SysUser insertUser(UserRegistryVo userRegistryVo) {
-        LambdaQueryWrapper<SysUser> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.select(SysUser::getRoleName);
-        List<String> list = new ArrayList<>();
-        for (SysUser sysUser : sysUserMapper.selectList(queryWrapper)) {
-            list.add(sysUser.getRoleName());
-        }
+        //LambdaQueryWrapper<SysUser> queryWrapper = new LambdaQueryWrapper<>();
+        //queryWrapper.select(SysUser::getRoleName);
+        //List<String> list = new ArrayList<>();
+        //for (SysUser sysUser : sysUserMapper.selectList(queryWrapper)) {
+        //    list.add(sysUser.getRoleName());
+        //}
+        List<String> list = getRolesNames();
         QueryWrapper<SysUser> wrapper = new QueryWrapper<>();
         wrapper.select("id")
                 .orderByDesc("id")
@@ -193,12 +213,22 @@ public class LoginServiceImpl implements LoginService {
         sysUser.setUpdateTime(DateUtil.date());
         if (list.contains(userRegistryVo.getRoleName())) {
             insertRole(userRegistryVo.getRoleName() + MyEnum.NEW);
-        } else if(StringUtils.isNotEmpty(userRegistryVo.getRoleName())){
+        } else if (StringUtils.isNotEmpty(userRegistryVo.getRoleName())) {
             insertRole(userRegistryVo.getRoleName());
-        }else{
+        } else {
             insertRole(MyEnum.ROLE_USER + id);
         }
         return sysUser;
+    }
+
+    private List<String> getRolesNames() {
+        LambdaQueryWrapper<SysUser> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.select(SysUser::getRoleName);
+        List<String> list = new ArrayList<>();
+        for (SysUser sysUser : sysUserMapper.selectList(queryWrapper)) {
+            list.add(sysUser.getRoleName());
+        }
+        return list;
     }
 
     private void insertUserRole() {

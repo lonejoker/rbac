@@ -12,4 +12,9 @@
 		  AND r.`status` = 0
 		  AND m.`status` = 0
 	</select>
+	<select id="getMenuName" resultType="java.lang.String">
+		select menu_name
+		from sys_menu
+		where id = #{menuid}
+	</select>
 </mapper>

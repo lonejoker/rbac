@@ -7,4 +7,9 @@
 		from sys_role
 		where flag = #{roleName}
 	</select>
+	<select id="selectRoleNames" resultType="java.lang.Long">
+		select menu_id
+		from sys_role_menu
+		where role_id = #{role_id}
+	</select>
 </mapper>
