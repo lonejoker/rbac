@@ -13,7 +13,4 @@ public interface LoginService {
 
     R registry(UserRegistryVo userRegistryVo) throws IllegalAccessException;
 
-    R getRolesName();
-
-    R getRole(String roleName);
 }

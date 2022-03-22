@@ -47,8 +47,7 @@ public class LoginServiceImpl implements LoginService {
     private SysUserMapper sysUserMapper;
     @Autowired
     private SysUserRoleMapper sysUserRoleMapper;
-    @Autowired
-    private SysMenuMapper sysMenuMapper;
+
     @Autowired
     private RedisCache redisCache;
     @Autowired
@@ -155,26 +154,6 @@ public class LoginServiceImpl implements LoginService {
         return R.error(RInfo.ERROR4xx.getCode(), "请认真填写内容");
     }
 
-    @Override
-    public R getRolesName() {
-        List<String> rolesNameList = getRolesNames();
-        return R.successCmd(rolesNameList);
-    }
-
-    @Override
-    public R getRole(String roleName) {
-        return R.successCmd(getRoleMenus(roleName));
-    }
-
-    private List<Object> getRoleMenus(String roleName) {
-        List<Long> menuId = sysRoleMapper.selectRoleNames(sysRoleMapper.selectRoleIdByRoleName(roleName));
-        List<Object> list = new ArrayList<>();
-        for (int i = 0; i < menuId.size(); i++) {
-            list.add(sysMenuMapper.getMenuName(menuId.get(i)));
-        }
-        return list;
-    }
-
     private void insertInfo(UserRegistryVo userRegistryVo) {
         SysUser sysUser = insertUser(userRegistryVo);
         sysUserMapper.insert(sysUser);
@@ -222,8 +201,8 @@ public class LoginServiceImpl implements LoginService {
     }
 
     private List<String> getRolesNames() {
-        LambdaQueryWrapper<SysUser> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.select(SysUser::getRoleName);
+        QueryWrapper<SysUser> queryWrapper = new QueryWrapper<>();
+        queryWrapper.select("DISTINCT role_name");
         List<String> list = new ArrayList<>();
         for (SysUser sysUser : sysUserMapper.selectList(queryWrapper)) {
             list.add(sysUser.getRoleName());

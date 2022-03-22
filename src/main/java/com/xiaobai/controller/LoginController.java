@@ -49,15 +49,4 @@ public class LoginController {
         return loginService.roleLoginList(roleName);
     }
 
-    @GetMapping("/getMenuName")
-    @SystemLog(businessName =  "获取权限菜单重载")
-    public R getRole(@RequestParam String roleName) {
-        return loginService.getRole(roleName);
-    }
-
-    @GetMapping("/getRolesName")
-    @SystemLog(businessName =  "获取角色列表")
-    public R getRolesName(){
-        return loginService.getRolesName();
-    }
 }
