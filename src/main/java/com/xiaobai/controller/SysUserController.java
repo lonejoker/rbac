@@ -2,6 +2,7 @@ package com.xiaobai.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xiaobai.annotation.SystemLog;
+import com.xiaobai.vo.UserInfo;
 import com.xiaobai.vo.UserRegistryVo;
 import org.springframework.web.bind.annotation.*;
 
@@ -59,9 +60,9 @@ public class SysUserController {
         return sysUserService.delSysUserAll(ids);
     }
 
-    @PutMapping("/updateSysUser")
-    public R updateSysUser(@RequestParam Long id, @RequestParam String info) {
-        return sysUserService.updateSysUser(id, info);
+    @PostMapping("/updateSysUser")
+    public R updateSysUser(@RequestBody UserInfo userInfo) {
+        return sysUserService.updateSysUser(userInfo);
     }
 
     @GetMapping("/getMenuName")

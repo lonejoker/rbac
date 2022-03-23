@@ -1,5 +1,7 @@
 package com.xiaobai.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.xiaobai.entity.SysRole;
 import com.xiaobai.entity.SysRoleMenu;
 import com.xiaobai.entity.SysUser;
@@ -9,6 +11,7 @@ import com.xiaobai.mapper.*;
 import com.xiaobai.service.SysUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xiaobai.utils.PubMethod;
+import com.xiaobai.vo.UserInfo;
 import com.xiaobai.vo.UserRegistryVo;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -63,7 +66,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         LambdaQueryWrapper<SysUser> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(SysUser::getDelFlag, 0)
                 .orderByAsc(SysUser::getCreateTime);
-        Page<SysUser> page = new Page<>(pageNum-1, pageSize);
+        Page<SysUser> page = new Page<>(pageNum - 1, pageSize);
         page(page, wrapper);
         return R.successCmd(page);
     }
@@ -104,12 +107,28 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     }
 
     @Override
-    public R updateSysUser(Long id, String info) {
-        // 判断是否为空
-
+    public R updateSysUser(UserInfo userInfo) {
         SysUser sysUser = new SysUser();
-        sysUser.setId(id);
-        // 赋值修改内容
+        if (StringUtils.isNotEmpty(userInfo.getNickName())) {
+            sysUser.setNickName(userInfo.getNickName());
+        }
+        if (StringUtils.isNotEmpty(userInfo.getEmail())) {
+            sysUser.setEmail(userInfo.getEmail());
+        }
+        if (StringUtils.isNotEmpty(userInfo.getPassword())) {
+            sysUser.setPassword(passwordEncoder.encode(userInfo.getPassword()));
+        }
+        if (StringUtils.isNotEmpty(userInfo.getPhone())) {
+            sysUser.setPhone(userInfo.getPhone());
+        }
+        if (StringUtils.isNotEmpty(userInfo.getRoleName())) {
+            sysUser.setRoleName(userInfo.getRoleName());
+        }
+        if (StringUtils.isNotEmpty(userInfo.getUserAvatar())) {
+            sysUser.setUserAvatar(userInfo.getUserAvatar());
+        }
+        sysUser.setId(userInfo.getId());
+        sysUser.setUpdateTime(DateUtil.date());
         sysUserMapper.updateById(sysUser);
         return R.successCm();
     }
@@ -139,6 +158,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         sysUserMapper.insert(sysUser);
         insertUserRole();
     }
+
     private SysUser insertUser(UserRegistryVo userRegistryVo) {
         List<String> list = getRolesNames();
         QueryWrapper<SysUser> wrapper = new QueryWrapper<>();
@@ -222,6 +242,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         }
         return list;
     }
+
     private List<Object> getRoleMenus(String roleName) {
         List<Long> menuId = sysRoleMapper.selectRoleNames(sysRoleMapper.selectRoleIdByRoleName(roleName));
         List<Object> list = new ArrayList<>();

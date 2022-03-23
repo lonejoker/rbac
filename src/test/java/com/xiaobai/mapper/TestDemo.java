@@ -1,9 +1,14 @@
 package com.xiaobai.mapper;
 
+import com.xiaobai.entity.LoginUser;
 import com.xiaobai.entity.SysUser;
+import com.xiaobai.utils.RedisCache;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.ArrayList;
@@ -66,5 +71,26 @@ public class TestDemo {
         for (Map.Entry<Object, Object> keySet : map.entrySet()) {
             System.out.println(keySet.getValue() + "---" + keySet.getKey());
         }
+    }
+
+    @Value("${server.url}")
+    private String url;
+    @Value("${server.port}")
+    private Integer port;
+
+    @Test
+    public void testurl() {
+        System.out.println(url + ":" + port);
+    }
+    @Autowired
+    private RedisCache redisCache;
+    @Test
+    public void testid() {
+        UsernamePasswordAuthenticationToken authentication = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+        LoginUser loginUser = (LoginUser) authentication.getPrincipal();
+        Long userid = loginUser.getSysUser().getId();
+        // 删除redis的值，拼接key，需要用到用户id
+        Object cacheObject = redisCache.getCacheObject("rbac:" + userid);
+        System.out.println(cacheObject);
     }
 }
