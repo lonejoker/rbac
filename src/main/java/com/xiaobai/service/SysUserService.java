@@ -25,4 +25,6 @@ public interface SysUserService extends IService<SysUser> {
     R getRolesName();
 
     R registry(UserRegistryVo userRegistryVo) throws IllegalAccessException;
+
+    R sysUserPageAll(Integer pageNum, Integer pageSize);
 }

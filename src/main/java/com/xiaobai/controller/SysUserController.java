@@ -34,6 +34,11 @@ public class SysUserController {
         return sysUserService.sysUserPage(pageNum, pageSize, nickName);
     }
 
+    @GetMapping("/pageAll")
+    public R sysUserPageAll(@RequestParam(required = false) Integer pageNum, @RequestParam(required = false) Integer pageSize) {
+        return sysUserService.sysUserPageAll(pageNum, pageSize);
+    }
+
     @GetMapping("/getSysUserInfo")
     public R getPages() {
         return sysUserService.getPages();

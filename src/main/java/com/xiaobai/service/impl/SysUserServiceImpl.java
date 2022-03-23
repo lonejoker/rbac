@@ -59,6 +59,16 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     }
 
     @Override
+    public R sysUserPageAll(Integer pageNum, Integer pageSize) {
+        LambdaQueryWrapper<SysUser> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(SysUser::getDelFlag, 0)
+                .orderByAsc(SysUser::getCreateTime);
+        Page<SysUser> page = new Page<>(pageNum-1, pageSize);
+        page(page, wrapper);
+        return R.successCmd(page);
+    }
+
+    @Override
     public R getPages() {
         QueryWrapper<SysUser> wrapper = new QueryWrapper<>();
         wrapper.eq("delFlag", 0).orderByDesc("createTime");
@@ -123,6 +133,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         }
         return R.error(RInfo.ERROR4xx.getCode(), "请认真填写内容");
     }
+
     private void insertInfo(UserRegistryVo userRegistryVo) {
         SysUser sysUser = insertUser(userRegistryVo);
         sysUserMapper.insert(sysUser);
